@@ -3,13 +3,8 @@
 }
 
 
-.graph-container{
-  margin-top: 2rem;
-}
-
 
 .App-header {
-  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,12 +13,6 @@
   color: white;
 }
 
-.sub{
-  color:white
-}
 
-.text{
-  color: black;
-}
 
 
