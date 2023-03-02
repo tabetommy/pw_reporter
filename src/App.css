@@ -10,7 +10,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
+}
+
+input{
+  height: 40px;
+  width: 35%;
+}
+
+.cm-style{
+  resize: vertical;
 }
 
 
