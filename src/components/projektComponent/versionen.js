@@ -28,13 +28,15 @@ const Versionen=()=>{
              <div key={index} className='versionen-input'>
                 <div className='beleg'>
                     <label htmlFor='beleg'>Upload</label><br/>                 
-                        <IconButton color="primary" aria-label="upload picture" component="label">
+                        <IconButton color="primary" component="label" className='btn-upload'>
                             <input hidden type="file" name='beleg'
                             value={version.beleg}  onChange={e => handleChange(index, e)} />
                             <AddIcon />
                         </IconButton>
                     {/* <input type="file" id="beleg" name="beleg" className='beleg-input'
                     value={versionWerte.beleg}  onChange={e => handleChange(index, e)}/> */}  
+
+                    <span></span>
                 </div>
                 <div className='versionierung'>
                     <label htmlFor='version'>Versionierung</label><br/>
@@ -48,11 +50,10 @@ const Versionen=()=>{
                 </div>
             </div>
         ))}
-        <Stack direction="row" spacing={2} onClick={hinzufügenHandler}>
-            <Button variant="outlined" startIcon={<AddIcon />} >
-                Hinzufügen
-            </Button>
-        </Stack>
+        <button className='btn-add' onClick={hinzufügenHandler}>
+            <AddIcon fontSize='small' />
+            Version hinzufügen
+        </button>
     </div>
   );
 }

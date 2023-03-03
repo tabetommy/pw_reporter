@@ -6,14 +6,10 @@ const Projekt=()=>{
 
   const [projectWerte, setProjekteWerte]= React.useState("");
   const [unterProjektWerte, setUnterProjektWerte]= React.useState("");
+  const [datum, setDatum]= React.useState();
 
   const oberProjektOptionen=["Affinitätenbasierte Mailing Factory","Welcome Strecke","Dekorunde"];
   const unterProjektOptionen=["Ratenkredit", "Eigentümerkredit", "Stopschild-Mailing", "CBU ", "CB-GK "];
-
-  const current = new Date();
-  const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-  console.log(date)
-
 
   const projeKtWerteHandler=(event)=>{
     setProjekteWerte(event.target.value)
@@ -22,6 +18,8 @@ const Projekt=()=>{
   const unterProjektWerteHandler=(event)=>{
     setUnterProjektWerte(event.target.value)
   }
+
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <form>
@@ -53,7 +51,11 @@ const Projekt=()=>{
       <div className='main-con pal-medium'>
         <div className='pal'>
           <label htmlFor='pal'>PAL</label><br/>
-          <input type="date" name="pal" id='pal' className='pal-input' maxDate={date}/>
+          <input type="date" name="pal" id='pal' className='pal-input' 
+          max={today}
+          value={datum}
+          onChange={e=>setDatum(e.target.value)}
+          />
         </div>
         <div className='medium'>
           <label htmlFor='medium'>Medium</label><br/>
