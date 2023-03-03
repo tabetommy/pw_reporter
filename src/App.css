@@ -14,9 +14,55 @@
 }
 
 input{
+  border-radius: 50px;
+  border: none;
+  background-color:	#F8F8F8;
+  padding-left: 16px;
+}
+
+.main-con{
+  margin-top: 30px;
+}
+
+.input{
   height: 40px;
   width: 35%;
 }
+
+.pal-medium, .versionen-input{
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  /* height: 40px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.versionen-input{
+  margin-top: 10px;
+}
+
+.pal-input,
+.medium-input,
+.beleg-input,
+.versionierung-input,
+.versandmenge-input{
+  height: 40px;
+  width: 100%;
+}
+
+.pal{
+  width:30%
+}
+
+.medium, .versandmenge{
+  width: 60%;
+} 
+
+.versandmenge{
+  width: 20%;
+}
+
 
 .cm-style{
   resize: vertical;
