@@ -7,6 +7,9 @@ const Projekt=()=>{
   const [projectWerte, setProjekteWerte]= React.useState("");
   const [unterProjektWerte, setUnterProjektWerte]= React.useState("");
   const [datum, setDatum]= React.useState();
+  const [kommentar, setKommentar]= React.useState("");
+  const [gesamtmenge, setGesamtMenge] =React.useState();
+
 
   const oberProjektOptionen=["Affinitätenbasierte Mailing Factory","Welcome Strecke","Dekorunde"];
   const unterProjektOptionen=["Ratenkredit", "Eigentümerkredit", "Stopschild-Mailing", "CBU ", "CB-GK "];
@@ -68,13 +71,17 @@ const Projekt=()=>{
       <div className='main-con textarea-con'>
         <label htmlFor='kommentar'>Kommentar</label><br/>
         <textarea cols="30" rows="10" name="kommentar"
-          id="kommentar" className="cm-style" placeholder='Hinweise zum Projekte eintragen'></textarea>
+          id="kommentar" className="cm-style" placeholder='Hinweise zum Projekte eintragen'
+          value={kommentar}
+          onChange={e=>setKommentar(e.target.value)}
+          ></textarea>
       </div>
 
      <div className='main-con  gesamtmenge'>
         <label htmlFor='gesamt-menge'>Gesamtaussendemenge</label><br/>
         <input name='gesamt-menge' id='gesamt-menge' 
-        type="number" min="0" /><br/>
+        type="number" min="0" 
+        value={gesamtmenge} onChange={e=>setGesamtMenge(e.target.value)}/><br/>
      </div>
       
       <div className='main-con btn-con'>
