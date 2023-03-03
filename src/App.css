@@ -1,16 +1,24 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+*{
+  box-sizing: border-box;
 }
 
-
-
-.App-header {
+.App-con {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: black;
+  width: 70%;
+  margin-left: 30%;
+}
+
+.pr-page{
+  font-size: 23px;
+  font-weight: 700;
+}
+
+label{
+  font-weight: 600;
 }
 
 input{
@@ -18,24 +26,23 @@ input{
   border: none;
   background-color:	#F8F8F8;
   padding-left: 16px;
+  margin-top: 7px;
 }
 
 .main-con{
   margin-top: 30px;
+
 }
 
 .input{
   height: 40px;
-  width: 35%;
+  width: 50%;
 }
 
 .pal-medium, .versionen-input{
   display: flex;
   justify-content: space-between;
-  width: 35%;
-  /* height: 40px; */
-  margin-left: auto;
-  margin-right: auto;
+  width: 50%;
 }
 
 .versionen-input{
@@ -64,10 +71,46 @@ input{
 }
 
 
-.cm-style{
-  resize: vertical;
+.textarea-con{
+  width: 50%;
 }
 
+textarea{
+  padding: 20px;
+  margin-top: 7px;
+  width:100%;
+  border-radius: 10px;
+  border: none;
+  background-color:	#F8F8F8;
+  padding-left: 16px;
+  resize: none;
+}
 
+.btn-con{
+  margin-bottom: 80px;
+}
+
+.pr-speichern{
+  /* width: 130px; */
+  margin-right: 15px;
+  border-radius: 17px;
+  border: none;
+  background-color: rgb(77, 43, 214);
+  color: white;
+  padding: 13px 23px;
+}
+
+.verwerfen{
+  border-radius: 17px;
+  border: none;
+  background-color: #F8F8F8;
+  color: rgb(77, 43, 214);
+  padding: 13px 23px;
+  font-weight: 700;
+}
+
+.gesamtmenge input{
+  height: 40px;
+}
 
 

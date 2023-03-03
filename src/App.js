@@ -6,8 +6,10 @@ import './App.css';
 function App() {
   return (
     <div className="App"> 
-        <p>Neues Projekt esrtellen</p>
+      <div className='App-con'>
+        <p className='pr-page'>Neues Projekt esrtellen</p>
         <Projekt />
+      </div>
     </div>
   );
 }
